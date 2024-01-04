@@ -361,15 +361,16 @@ nav .avatar-btn {
 
 main {
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr;
    position: relative;
    height: 100%;
-   padding-top: 3.5rem;
+   padding: 3.5rem 3.5rem 0 3.5rem;
 }
 
 section {
    display: flex;
    flex-direction: column;
+   justify-content: center;
 }
 
 section .flex {
@@ -380,6 +381,10 @@ section .flex {
 
 section:first-of-type .wrapper {
    margin-bottom: 3rem;
+}
+
+section:last-of-type .flex {
+   justify-content: center;
 }
 
 .recordings {
@@ -406,4 +411,9 @@ section:first-of-type .wrapper {
    flex: 1;
    text-align: start;
    white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+   main {
+      grid-template-columns: 1fr 1fr;
 }
